@@ -1,0 +1,26 @@
+<form>
+  
+  <div>
+    <h1>Todo App</h1>
+    <h2>A place to store your to-dos</h2>
+    
+    <input type="text" placeholder="Filter your to-dos" name="filter">
+    
+    <div>
+      <ol>
+        
+        <ng-template ngFor let-todo [ngForOf]="todoArray">
+          
+          <app-todo [completed]="todo.completed" [task]="todo.task"></app-todo>
+          
+        </ng-template>
+        
+      </ol>
+    </div>
+    
+    <input id="clearText" type="text" placeholder="What is your next to-do?" name="todo" [(ngModel)]="newTodo">
+    <button class="add-button" (click)="addTodo(newTodo)">Add</button>
+    
+  </div>
+  
+</form>

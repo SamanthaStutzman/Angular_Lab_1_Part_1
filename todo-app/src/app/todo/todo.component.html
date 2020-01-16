@@ -1,0 +1,10 @@
+<li>
+
+  <span [ngClass]="{'complete' : completed, 'not-complete' : !completed}">
+    <button *ngIf="!completed" class="complete-button">Complete?</button> 
+    {{task}}
+  </span>
+
+  <button class="floating">X</button>
+
+</li>
